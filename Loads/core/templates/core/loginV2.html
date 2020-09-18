@@ -1,0 +1,115 @@
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<style>
+    *{
+        background: #EB5757;
+        font-family: Source Code Pro;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: white;
+
+    }
+    .hexo{
+        display: flex;
+        justify-content: center;
+        margin-top: 30vh;
+    }
+    .total{
+        width: 642px;
+    }
+    .head{
+        background: #C4C4C4;
+        border-radius: 10px 10px 0px 0px;
+        display: flex;
+        padding-left: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .head-balls{
+        display: flex;
+        background: #C4C4C4;
+        border-radius: 10px 10px 0px 0px;
+        
+    }
+    .HB{
+        width: 1rem;
+        height: 1rem;
+        border-radius: 100%;
+        margin-left: 3px;
+    }
+    .Rball{
+        background: #FF6159;
+        border: 1px solid #D9524C;
+    }
+    .Yball{
+        background: #FFBF2F;
+        border: 1px solid #D1A84C;
+    }
+    .Gball{
+        background: #25CC3E;
+        border: 1px solid #3AAC4B;
+    }
+    .head-title{
+        font-family: Source Code Pro;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: left;
+        background: #C4C4C4;
+        border-radius: 10px 10px 0px 0px;
+        margin: auto;
+        color: #40444B;
+    }
+    .body{
+    width: 642px;height: 241px;background: rgba(242, 153, 74, 0.2);box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);border-radius: 0px 0px 10px 10px;
+    }
+    .mody{
+    background:rgba(0, 0, 0, 0) ;padding-left:1.5rem;padding-top:.5rem;
+    }
+    input{
+    background: transparent !important;border: 0px solid;outline: none;
+    }
+    input:-webkit-autofill,
+    textarea:-webkit-autofill,
+    select:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 1000px #EC6555 inset !important;
+        /*use inset box-shadow to cover background-color*/
+        -webkit-text-fill-color: white !important;
+        /*use text fill color to cover font color*/
+        -webkit-tap-highlight-color: transparent !important;
+    }
+</style>
+<html>
+    <div class="hexo">
+        <div class="Total">
+            <div class="head">
+                <div class="head-balls">
+                    <div class="Rball HB"></div>
+                    <div class="Yball HB"></div>
+                    <div class="Gball HB"></div>
+                </div>
+                <div class="head-title">
+                    Treminal-(Mecha)~Pie~4~FCD$
+                </div>
+            </div>
+            <div class="body">
+                <form class="mody" method="POST" action="{% url 'core:terminal_verify' that_id=that_id %}" >
+                    {% csrf_token %}
+                    <h3 style="background:rgba(0, 0, 0, 0)">Mecha@DESKTOP-PHFRTLE /mecha/user/Terminate: Mecha run Superuser8080</h3>
+                    <label for="Username" style="background:rgba(0, 0, 0, 0)">~ Username :  {{that_id}}</label>
+                    <br>
+                    <label for="Username" style="background:rgba(0, 0, 0, 0)">~ Key :  </label>
+                    <input type="text" spellcheck="false" autocomplete="off" name="that_pass" size="70" autofocus >
+
+                    <button hidden></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</html>
